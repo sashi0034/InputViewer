@@ -5,12 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InputViewer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="Input Viewer" Height="300" Width="400"
         xmlns:ui="http://schemas.modernwpf.com/2019"
-        ui:WindowHelper.UseModernWindowStyle="True">
-    <ui:SimpleStackPanel Margin="12" Spacing="24">
-        <TextBlock Text="My first ModernWPF app" Style="{StaticResource HeaderTextBlockStyle}" />
-        <Button Content="I am a button" />
-        <Button Content="I am an accent button" Style="{StaticResource AccentButtonStyle}" />
-    </ui:SimpleStackPanel>
+        ui:WindowHelper.UseModernWindowStyle="True"
+        Background="{DynamicResource SystemControlPageBackgroundAltHighBrush}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ui:SimpleStackPanel Grid.Row="0" Orientation="Horizontal" Margin="12,8" Spacing="16">
+            <ui:ToggleSwitch x:Name="AlwaysOnTopSwitch" Header="Always on Top" Toggled="AlwaysOnTop_Toggled" OnContent="" OffContent="" />
+            <ui:ToggleSwitch x:Name="LockSizeSwitch" Header="Lock Size" Toggled="LockSize_Toggled" OnContent="" OffContent="" />
+        </ui:SimpleStackPanel>
+
+        <ui:SimpleStackPanel Grid.Row="1" Margin="12,0,12,12" Spacing="16">
+            <Border Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}" Padding="16" CornerRadius="8">
+                <StackPanel>
+                    <TextBlock Text="MOUSE POSITION" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{DynamicResource SystemControlPageTextBaseMediumBrush}"/>
+                    <TextBlock x:Name="MousePositionText" Text="(0, 0)" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center" Margin="0,4,0,0"/>
+                </StackPanel>
+            </Border>
+
+            <Border Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}" Padding="16" CornerRadius="8" VerticalAlignment="Stretch">
+                <StackPanel>
+                    <TextBlock Text="PRESSED KEYS" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{DynamicResource SystemControlPageTextBaseMediumBrush}"/>
+                    <ItemsControl x:Name="PressedKeysList" Margin="0,8,0,0">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border Background="{DynamicResource SystemAccentColorBrush}" CornerRadius="4" Padding="8,4" Margin="2">
+                                    <TextBlock Text="{Binding}" Foreground="White" FontWeight="Bold" FontSize="14"/>
+                                </Border>
+
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </Border>
+        </ui:SimpleStackPanel>
+    </Grid>
 </Window>
+

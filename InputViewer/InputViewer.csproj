@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="ModernWpfUI" Version="0.9.6" />
+    <PackageReference Include="SharpHook" Version="7.1.1" />
   </ItemGroup>
 
 </Project>
