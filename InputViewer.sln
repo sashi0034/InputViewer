@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputViewer", "InputViewer\InputViewer.csproj", "{039150C6-CD5D-4ADB-AFD3-A7D62A5F57FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{039150C6-CD5D-4ADB-AFD3-A7D62A5F57FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{039150C6-CD5D-4ADB-AFD3-A7D62A5F57FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{039150C6-CD5D-4ADB-AFD3-A7D62A5F57FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{039150C6-CD5D-4ADB-AFD3-A7D62A5F57FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7E8E028-67E4-4E2F-8E7B-9B59BB42A7C2}
+	EndGlobalSection
+EndGlobal
