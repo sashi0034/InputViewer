@@ -56,7 +56,7 @@
                 <Border Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}" Padding="12" CornerRadius="8">
                     <StackPanel>
                         <TextBlock Text="ACTIVE WINDOW" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{DynamicResource SystemControlPageTextBaseMediumBrush}"/>
-                        <TextBlock x:Name="ActiveWindowText" Text="Detecting..." Style="{StaticResource BodyTextBlockStyle}" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" Margin="0,4,0,0"/>
+                        <TextBlock x:Name="ActiveWindowText" Text="Detecting..." Style="{StaticResource BodyTextBlockStyle}" FontWeight="SemiBold" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Margin="0,4,0,0"/>
                     </StackPanel>
                 </Border>
 
@@ -69,11 +69,11 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0">
                             <TextBlock Text="MOUSE POSITION" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{DynamicResource SystemControlPageTextBaseMediumBrush}"/>
-                            <TextBlock x:Name="MousePositionText" Text="(0, 0)" Style="{StaticResource BodyTextBlockStyle}" FontWeight="SemiBold" Margin="0,4,0,0"/>
+                            <TextBlock x:Name="MousePositionText" Text="(0, 0)" Style="{StaticResource BodyTextBlockStyle}" FontWeight="SemiBold" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Margin="0,4,0,0"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1">
                             <TextBlock Text="MOUSE BUTTONS" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{DynamicResource SystemControlPageTextBaseMediumBrush}"/>
-                            <TextBlock x:Name="MouseButtonText" Text="None" Style="{StaticResource BodyTextBlockStyle}" Foreground="{DynamicResource SystemControlPageTextBaseMediumBrush}" Opacity="0.5" FontStyle="Italic" FontWeight="SemiBold" Margin="0,4,0,0"/>
+                            <TextBlock x:Name="MouseButtonText" Text="None" Style="{StaticResource BodyTextBlockStyle}" Foreground="{DynamicResource SystemControlPageTextBaseMediumBrush}" Opacity="0.5" FontStyle="Italic" FontWeight="SemiBold" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Margin="0,4,0,0"/>
                         </StackPanel>
                     </Grid>
                 </Border>
@@ -82,7 +82,7 @@
                 <Border Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}" Padding="12" CornerRadius="8">
                     <StackPanel>
                         <TextBlock Text="PRESSED KEYS" Style="{StaticResource CaptionTextBlockStyle}" Foreground="{DynamicResource SystemControlPageTextBaseMediumBrush}"/>
-                        <TextBlock x:Name="PressedKeysText" Text="None" Style="{StaticResource BodyTextBlockStyle}" Foreground="{DynamicResource SystemControlPageTextBaseMediumBrush}" Opacity="0.5" FontStyle="Italic" FontWeight="SemiBold" Margin="0,4,0,0"/>
+                        <TextBlock x:Name="PressedKeysText" Text="None" Style="{StaticResource BodyTextBlockStyle}" Foreground="{DynamicResource SystemControlPageTextBaseMediumBrush}" Opacity="0.5" FontStyle="Italic" FontWeight="SemiBold" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" Margin="0,4,0,0"/>
 
 
                     </StackPanel>

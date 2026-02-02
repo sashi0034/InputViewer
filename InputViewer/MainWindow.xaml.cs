@@ -71,6 +71,8 @@ namespace InputViewer
         private void OnKeyPressed(object? sender, KeyboardHookEventArgs e)
         {
             var keyName = GetKeyName(e.Data.KeyCode);
+            if (keyName == "Undefined") return;
+
             Dispatcher.Invoke(() =>
             {
                 if (!_pressedKeys.Contains(keyName))
@@ -84,12 +86,15 @@ namespace InputViewer
         private void OnKeyReleased(object? sender, KeyboardHookEventArgs e)
         {
             var keyName = GetKeyName(e.Data.KeyCode);
+            if (keyName == "Undefined") return;
+
             Dispatcher.Invoke(() =>
             {
                 _pressedKeys.Remove(keyName);
                 UpdatePressedKeysText();
             });
         }
+
 
         private void OnMouseMoved(object? sender, MouseHookEventArgs e)
         {
