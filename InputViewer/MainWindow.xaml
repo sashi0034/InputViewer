@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:InputViewer"
         mc:Ignorable="d"
         Title="Input Viewer" Height="400" Width="450"
+        Icon="Assets/icon.png"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         ui:WindowHelper.UseModernWindowStyle="True"
         Background="{DynamicResource SystemControlPageBackgroundAltHighBrush}">
